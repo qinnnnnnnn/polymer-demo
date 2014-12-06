@@ -4,7 +4,7 @@
 <polymer-element name="my-element" noscript>
   <template>
     <span>I'm <b>my-element</b>. This is my Shadow DOM.</span>
-    <core-ajax url="http://example.com/json" auto response="{{resp}}"></core-ajax>
+    <core-ajax url="../api/posts.json" auto response="{{resp}}"></core-ajax>
     <textarea value="{{resp}}"></textarea>
   </template>
 </polymer-element>
