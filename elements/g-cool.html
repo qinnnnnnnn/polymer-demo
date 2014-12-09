@@ -1,0 +1,19 @@
+
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="g-cool" on-keypress="{{keypressHandler}}">
+  <template>
+    <button on-click="{{buttonClick}}"></button>
+  </template>
+  <script>
+    Polymer('g-cool', {
+      keypressHandler: function(event, detail, sender) { 
+
+      },
+      buttonClick: function(event, detail, sender) { 
+      	alert('qin');
+      }
+    });
+  </script>
+</polymer-element>
