@@ -1,0 +1,24 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="ouch-button">
+  <template>
+    <button on-click="{{onClick}}">qin</button>
+  </template>
+  <script>
+    Polymer('ouch-button', {
+      onClick: function() {
+        this.fire('ouch', {msg: 'qinqinqin'}); 
+        // fire(inType, inDetail, inToNode)
+      }
+    });
+  </script>
+</polymer-element>
+
+<ouch-button></ouch-button>
+
+<script>
+  document.querySelector('ouch-button').addEventListener('ouch', function(e) {
+    console.log(e.type, e.detail.msg); 
+  });
+</script>

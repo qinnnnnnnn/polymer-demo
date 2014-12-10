@@ -1,0 +1,15 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+
+<polymer-element name="x-form">
+  <template>
+    <input type="text" id="nameInput">
+  </template>
+  <script>
+    Polymer('x-form', {
+      logNameValue: function() {
+        console.log(this.$.nameInput.value);
+      }
+    });
+  </script>
+</polymer-element>
