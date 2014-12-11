@@ -1,0 +1,19 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+<link rel="import"
+      href="polymer-cool.html">
+      
+<polymer-element name="polymer-cooler" extends="polymer-cool">
+  <template>
+    <shadow></shadow>
+    <button on-click="{{makeCoolest}}">click</button>
+  </template>
+  <script>
+    Polymer('polymer-cooler', {
+      praise: 'qin',
+      makeCoolest: function() {
+        this.super(); // calls polymer-cool's makeCoolest()
+      }
+    });
+  </script>
+</polymer-element>
