@@ -1,0 +1,26 @@
+<link rel="import"
+      href="../bower_components/polymer/polymer.html">
+      
+<polymer-element name="greeting-tag">
+  <!-- 最外面的 template 定义了 element 的 shadow DOM -->
+  <template>
+    <ul>
+      <template repeat="{{s in salutations}}">
+        <li>{{s.what}}: <input type="text" value="{{s.who}}"></li>
+      </template>
+    </ul>
+  </template>
+  <script>
+    Polymer('greeting-tag', {
+      ready: function() {
+        // 植入 element 的数据模型 (数组 salutations)
+        this.salutations = [
+          {what: 'Hello', who: 'World'},
+          {what: 'GoodBye', who: 'DOM APIs'},
+          {what: 'Hello', who: 'Declarative'},
+          {what: 'GoodBye', who: 'Imperative'}
+        ];
+      }
+    });
+  </script>
+</polymer-element>
