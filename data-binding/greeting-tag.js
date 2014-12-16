@@ -12,5 +12,10 @@ Polymer('greeting-tag', {
   updateModel: function() {
     this.current = (this.current + 1) % this.alternates.length;
     this.salutations[0].what = this.alternates[this.current];
+  },
+  selectStory: function(e, detail, sender) {
+    var story = e.target.templateInstance.model.s;
+    console.log("Clicked " + story.headline);
+    this.loadStory(story.id); // 访问数据模型中未被渲染的数据
   }
 });
