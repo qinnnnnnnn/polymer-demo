@@ -9,7 +9,9 @@
   <link rel="import" href="../bower_components/core-menu/core-menu.html">
   <link rel="import" href="../bower_components/core-item/core-item.html">
   <link rel="import" href="../bower_components/core-toolbar/core-toolbar.html">
+  <link rel="import" href="../bower_components/core-icons/core-icons.html">
   <link rel="import" href="../bower_components/core-icon-button/core-icon-button.html">
+  <link rel="import" href="../bower_components/core-collapse/core-collapse.html">
   <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
   <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="../bower_components/font-roboto/roboto.html">
@@ -50,6 +52,20 @@
       width: 80%;
       margin: 50px auto;
     }
+    paper-fab {
+      margin: 0px auto;
+      margin-bottom:1em;
+      display: block;
+    }
+    paper-fab.blue {
+      background: #5677fc;
+    }
+    paper-fab.green {
+      background: #259b24;
+    }
+    paper-fab.pink{
+      background: #ff4080;
+    }
     
   </style>
 
@@ -76,7 +92,14 @@
     <div class="container" layout vertical center>
       <post-list show="all"></post-list>
     </div>
-    <paper-fab icon="add" id="addbtn"></paper-fab>
+    <section id="addbtn">
+      <core-collapse id="collapse" class="box">
+          <paper-fab icon="done" mini class="pink"></paper-fab>
+          <paper-fab icon="create" mini class="green"></paper-fab>
+          <paper-fab icon="add" mini class="blue"></paper-fab>
+      </core-collapse>
+      <paper-fab icon="add" onclick="document.querySelector('#collapse').toggle()"></paper-fab>
+    </section>
   </core-header-panel>
 
 </core-drawer-panel>
