@@ -11,12 +11,22 @@
     }
     post-card {
       margin-bottom: 30px;
+      width: 87%;
+    }
+    @media screen and (min-width: 900px){
+      post-card {
+        margin-bottom: 30px;
+        width: 260px;
+        height: 200px;
+        margin-right: 22px;
+        float: left;
+      }
     }
     </style>
 
     <post-service id="service" posts="{{posts}}"></post-service>
     
-    <div layout vertical center>
+    <div layout center>
       <template repeat="{{post in posts}}">
         <post-card
           favorite="{{post.favorite}}"
