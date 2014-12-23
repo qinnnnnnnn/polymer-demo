@@ -1,0 +1,8 @@
+{
+    "main" : "index/index.html",
+    "name" : "every-status",
+    "window" : {
+          "toolbar" : false
+     }
+
+}

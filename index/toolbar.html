@@ -22,7 +22,6 @@
       height: 100%;
       margin: 0;
       background-color: #E5E5E5;
-      font-family: 'RobotoDraft', sans-serif;
     }
     core-header-panel {
       background: white;
@@ -36,12 +35,6 @@
     }
     #main-panel{
       background-color: #E5E5E5;
-    }
-    p {
-      margin: 20px;
-      padding: 80px 20px;
-      border-radius: 20px;
-      background-color: #eee;
     }
     #addbtn{
       position: fixed;
@@ -92,7 +85,7 @@
     <core-toolbar class="green">
       <core-icon-button icon="menu" id="navicon"></core-icon-button>
       <span flex>Every-status</span>
-      <core-icon-button icon="refresh"></core-icon-button>
+      <core-icon-button icon="refresh" onclick="window.location.reload();"></core-icon-button>
     </core-toolbar>
     <div class="container" layout vertical center>
       <post-list show="all"></post-list>
