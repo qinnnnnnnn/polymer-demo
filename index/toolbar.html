@@ -45,15 +45,6 @@
       width: 95%;
       margin: 50px auto;
     }
-    #tabs {
-      width: 100%;
-      margin: 0;
-      -webkit-user-select: none;
-      -moz-user-select: none;
-      -ms-user-select: none;
-      user-select: none;
-    text-transform: uppercase;
-    }
     paper-fab {
       margin: 0px auto;
       margin-bottom:1em;
@@ -85,7 +76,7 @@
     </core-toolbar>
     <core-menu selected="0">
       <core-item icon="account-box" label="Account"></core-item>
-      <core-item icon="favorite" name="favorite" label="Favorite"></core-item>
+      <core-item icon="favorite" label="Favorite"></core-item>
       <core-item icon="settings" label="Settings"></core-item>
     </core-menu>
   </core-header-panel>
@@ -118,12 +109,12 @@
     navicon.addEventListener('click', function() {
       drawerPanel.togglePanel();
     });
-  });
-  var tabs = document.querySelector('core-menu');
-  var list = document.querySelector('post-list');
-
-  tabs.addEventListener('core-select', function() {
-    list.show = tabs.selected;
+    var list = document.querySelector('post-list');
+    var items = document.querySelector('core-menu');
+    items.addEventListener('click',function(){
+      console.log(this);
+      list.show = items.selected;
+    });
   });
 </script>
 </body>
