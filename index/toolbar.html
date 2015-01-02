@@ -92,7 +92,7 @@
     </div>
     <section id="addbtn">
       <core-collapse id="collapse" class="box">
-          <paper-fab icon="done" mini class="pink"></paper-fab>
+          <paper-fab icon="archive" mini class="pink"></paper-fab>
           <paper-fab icon="create" mini class="green"></paper-fab>
           <paper-fab icon="add" mini class="blue"></paper-fab>
       </core-collapse>
@@ -112,7 +112,6 @@
     var list = document.querySelector('post-list');
     var items = document.querySelector('core-menu');
     items.addEventListener('click',function(){
-      console.log(list.show,items.selected);
       list.show = items.selected;
     });
   });
