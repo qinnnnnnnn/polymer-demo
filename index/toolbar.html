@@ -112,7 +112,7 @@
     var list = document.querySelector('post-list');
     var items = document.querySelector('core-menu');
     items.addEventListener('click',function(){
-      console.log(this);
+      console.log(list.show,items.selected);
       list.show = items.selected;
     });
   });
