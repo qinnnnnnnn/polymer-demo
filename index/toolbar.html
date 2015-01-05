@@ -15,6 +15,7 @@
   <link rel="import" href="../bower_components/paper-fab/paper-fab.html">
   <link rel="import" href="../bower_components/paper-tabs/paper-tabs.html">
   <link rel="import" href="../bower_components/font-roboto/roboto.html">
+  <link rel="import" href="../bower_components/paper-checkbox/paper-checkbox.html">
   <link rel="import" href="post-list.html">
 
   <style shim-shadowdom>
@@ -59,6 +60,18 @@
     paper-fab.pink{
       background: #ff4080;
     }
+    paper-checkbox {
+      padding: 20px 20px 20px 0;
+    }
+    section {
+      width: 300px;
+    }
+    paper-checkbox.blue::shadow #ink[checked] {
+      color: #4285f4;
+    }
+    paper-checkbox.blue::shadow #checkbox.checked {
+      border-color: #4285f4;
+    }
     @media screen and (max-width: 900px){
       .container {
         width: 80%;
@@ -79,6 +92,10 @@
       <core-item icon="favorite" label="Favorite"></core-item>
       <core-item icon="settings" label="Settings"></core-item>
     </core-menu>
+    <div horizontal layout>
+      <paper-checkbox checked></paper-checkbox>
+      <paper-checkbox></paper-checkbox>
+    </div>
   </core-header-panel>
 
   <core-header-panel main id="main-panel">
